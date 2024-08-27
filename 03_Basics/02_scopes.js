@@ -52,7 +52,7 @@ function addOne(num1){
 }
 //console.log(addOne(5))
 
-//console.log(addTwo(5))
+//console.log(addTwo(5))  //error
 const addTwo = function(num)
 {
     return num +2
