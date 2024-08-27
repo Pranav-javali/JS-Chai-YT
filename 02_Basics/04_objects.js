@@ -1,5 +1,5 @@
 
-//const tinderUser = new Object //Singleton object
+//const tinderUser = new Object() //Singleton object
 
 const tinderUser = {}
 
@@ -31,9 +31,16 @@ const obj2 = { 3:'a',4:'b' }
 
 //const obj3 = {obj1, obj2}
 //const obj3 = Object.assign(obj1,obj2)
-const obj3 = Object.assign({},obj1,obj2)
+
+//another way to combine object
+//const obj3 = Object.assign({},obj1,obj2)
+
+//using spread operator
+const obj3 = {...obj1, ...obj2}
 
 //console.log(obj3)
+
+
 
 const users = [
     {
@@ -58,7 +65,7 @@ users[1].email
 
 console.log(Object.keys(tinderUser))
 console.log(Object.values(tinderUser))
-console.log(Object.entries(tinderUser))
+console.log(Object.entries(tinderUser)) //both key and values will be in array(used rarely)
 
 console.log(tinderUser.hasOwnProperty('isLoggedIn'))
 console.log(tinderUser.hasOwnProperty('isLogged'))
