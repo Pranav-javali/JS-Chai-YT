@@ -26,7 +26,7 @@ const map = new Map()
 map.set('IN', "India")
 map.set('USA', "United States of America")
 map.set('FR', "France")
-//Adding duplicate
+//Adding duplicate but the o/p will have unique values and in same order
 map.set('IN', "India")
 
 //console.log(map);
