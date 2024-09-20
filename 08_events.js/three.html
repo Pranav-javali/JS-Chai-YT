@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async project</title>
+</head>
+<body>
+    <h1>Chai aur code</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    document.getElementById('start').addEventListener('click', Begin)
+    document.getElementById('stop').addEventListener('click', End)
+    let intervalId;
+    function Begin(){
+            const sayDate = function(str){
+            console.log(str, Date.now());
+            }
+
+         intervalId = setInterval(sayDate, 1000, "Hey")
+    }
+
+    function End(){
+        clearInterval(intervalId)
+        intervalId = null
+    }
+</script>
+</html>
