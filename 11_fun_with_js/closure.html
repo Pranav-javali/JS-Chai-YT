@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure aur chai</title>
+</head>
+<body style="background-color: #313131;">
+    <button id="orange">Orange</button>
+    <button id="green">Green</button>
+</body>
+<script>
+    //lexical scoping
+    // function outer(){
+    //     let name = "Pranav"
+    //     function inner(){
+    //         console.log("Inner->", name)
+    //     }
+    //     inner()
+    // }
+    // outer()
+
+    // function outer(){
+    //     let name = "Pranav"
+    //     //console.log("outer->", username)
+    //     function inner(){
+    //         //let username = "ppp123"
+    //         console.log("Inner->", name)
+    //     }
+    //     function innerTwo(){
+    //         console.log("InnerTwo->", name)
+    //         //console.log("username->", username)
+    //     }
+    //     inner()
+    //     innerTwo()
+    // }
+    // outer()
+
+
+    //closure
+    // function makeFunc(){
+    //     const name = "Pranav";
+    //     function displayName(){
+    //         console.log(name);
+    //     }
+    //     return displayName;
+    // }
+
+    // const myFunc = makeFunc();
+    //myFunc();
+
+
+</script>
+<script>
+    // document.getElementById("orange").onclick = function(){
+    //     document.body.style.backgroundColor = `orange`
+    // }
+    // document.getElementById("green").onclick = function(){
+    //     document.body.style.backgroundColor = `green`
+    // }
+
+    function clickHandler(color){
+        //document.body.style.backgroundColor = `${color}`
+        function change(){
+            document.body.style.backgroundColor = `${color}`
+        }
+        return change
+    }
+
+    document.getElementById("orange").onclick = clickHandler("orange")
+    document.getElementById("green").onclick = clickHandler("green")
+</script>
+</html>
